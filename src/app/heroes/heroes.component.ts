@@ -15,18 +15,14 @@ export class HeroesComponent {
     this.getHeros();
   }
 
-  hero : Hero = {
-    id : 1,
-    name : 'Ali'
-  }
   heroes: Hero[] = [];
 
-  selectedHero ?: Hero
+  //selectedHero ?: Hero
 
-  onSelectHero(hero: Hero) {
+/*  onSelectHero(hero: Hero) {
     this.selectedHero = hero;
     this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
-  }
+  }*/
   getHeros(){
     this.heroService.getHeros().subscribe(
       heroes => this.heroes = heroes,
